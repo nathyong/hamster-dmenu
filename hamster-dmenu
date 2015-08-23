@@ -16,7 +16,7 @@
 # Paths to utilities
 hamster='/usr/bin/hamster-time-tracker'
 hamstercli='/usr/bin/hamster-cli'
-dmenu='/usr/bin/dmenu'
+dmenu='/usr/bin/rofi -dmenu'
 notify='/usr/bin/notify-send hamster'
 notifycrit='/usr/bin/notify-send -u critical hamster'
 
