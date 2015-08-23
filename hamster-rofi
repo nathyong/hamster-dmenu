@@ -9,14 +9,14 @@
 # - Completion list shows all entries, with the entries most recently entered via 
 #   hamster-dmenu first. So pressing 'enter' will continue the last activity.
 #
-# Requirements: hamster-cli, dmenu, notify-send, sed and awk
-# The script can be invoked with any dmenu settings (eg. -i for case insensitivity)
+# Requirements: hamster-cli, rofi, notify-send, sed and awk
+# The script can be invoked with any rofi settings (eg. -i for case insensitivity)
 #
 
 # Paths to utilities
 hamster='/usr/bin/hamster-time-tracker'
 hamstercli='/usr/bin/hamster-cli'
-dmenu='/usr/bin/dmenu'
+rofi='/usr/bin/rofi -dmenu'
 notify='/usr/bin/notify-send hamster'
 notifycrit='/usr/bin/notify-send -u critical hamster'
 
@@ -29,9 +29,9 @@ remove_empty_lines='sed /^\s*$/d'
 cachedir=${XDG_CACHE_HOME:-'$HOME/.cache'}
 cache_content=''
 if [ -d "${cachedir}" ]; then
-        cache=${cachedir}/hamster-dmenu
+        cache=${cachedir}/hamster-rofi
 else
-        cache=${HOME}/.hamster-dmenu-cache
+        cache=${HOME}/.hamster-rofi-cache
 fi
 
 # Build list of entries
